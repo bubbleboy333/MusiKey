@@ -100,6 +100,14 @@
       }
     </script>
     
+    <script>
+		      $(function() {
+		        $("#logout").click(function(){
+		          auth.logout();
+		        })
+		      })
+		    </script>
+    
     
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	</head>
@@ -113,8 +121,9 @@
 					<h1><a href="#">MusiKey</a></h1>
 					<p>A simple way to have perfect</br> music for your friends to enjoy</p>
 					<ul class="actions">
+						<li><button onclick="checkLoginState();"></button></li>
 						<li onclick="checkLoginState();" id="status"><a href="#" class="button special icon fa-facebook">Login with Facebook</a></li>
-						<li><a class="button">Log Out</a></li>
+						<li><a id="logout" class="button">Log Out</a></li>
 						<li><a href="#one" class="button icon fa-chevron-down scrolly">Learn More</a></li>
 					</ul>
 				</div>
@@ -122,6 +131,17 @@
 					</fb:login-button>
 				<div class="image phone"><div class="inner"><img src="images/logo.png" alt="" /></div></div>
 			</header>
+			
+		<!-- Logout -->
+		  <div>
+		    <script>
+		      $(function() {
+		        $("#logout").click(function(){
+		          auth.logout();
+		        })
+		      })
+		    </script>
+		  </div>
 
 		<!-- One -->
 			<section id="one" class="wrapper style2 special">
